@@ -63,7 +63,7 @@ section {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 /* glow */
