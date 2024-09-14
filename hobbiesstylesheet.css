@@ -18,7 +18,7 @@ header, section, footer {
     background-color: #300d2ec9; /* header */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* floating something effect */
+    box-shadow: 0 15px 20px rgb(250, 250, 250); /* floating something effect */
 }
 
 /* Header styling */
@@ -45,7 +45,7 @@ section {
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.5); /* effect chuchuwadcadwvcwac */
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 15px 30px rgba(255, 254, 254, 0.932); 
     margin: 40px auto; 
     max-width: 900px;
 }
