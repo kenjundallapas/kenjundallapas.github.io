@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9d4ed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    opacity: 0; 
+    animation: popIn 1.5s ease forwards; 
+}
+
+
+header {
+    text-align: center;
+    background-color: #300d2ec9;
+    color: white;
+    padding: 15px;
+    font-size: 2.5em;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    opacity: 0; 
+    animation: popIn 1s ease forwards; 
+    animation-delay: 0.2s; 
+}
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 0 50px;
+    opacity: 0; 
+    animation: popIn 1.2s ease forwards; 
+    animation-delay: 0.4s; 
+}
+
+/* Slider area */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Individual slide */
+.slide {
+    min-width: 300px;
+    margin: 0 15px;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.7; 
+    transform: scale(0.8); 
+}
+
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.current-slide img {
+    transform: scale(1.2);
+}
+
+
+.current-slide {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.slide img:hover {
+    box-shadow: 0 0 15px 10px #310c49e7;
+}
+
+/* Navigation buttons */
+button {
+    background-color: #310c49e7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+button:hover {
+    background-color: #581f7ee7;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2em;
+    z-index: 10;
+    margin-top: auto;
+    opacity: 0; 
+    animation: popIn 1s ease forwards; 
+    animation-delay: 0.6s; 
+}
+
+/* Footer links */
+footer a {
+    color: #8c4c99;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px #e0cde0;
+    color: white;
+}
+
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
