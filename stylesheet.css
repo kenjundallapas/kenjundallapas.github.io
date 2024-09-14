@@ -1,101 +1,107 @@
-
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d4edda; 
+    background-color: #d4edda; /* Light green background */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Allows the footer to be placed at the bottom */
+    min-height: 100vh; /* Ensure body fills at least the full height of the viewport */
 }
 
+/* Styling for header, section, footer with floating shadow */
+header, section, footer {
+    position: relative;
+    z-index: 1;
+    color: #000000c7;
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* Darker, wider shadow */
+}
+
+/* Header styling */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
     text-align: center;
     font-size: 2em;
-    animation: slideIn 1s ease; 
+    animation: popIn 0.8s ease forwards; /* Pop-in animation */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Floating effect */
 }
 
+/* Section styling */
 section {
     margin: 20px auto;
     padding: 20px;
     width: 75%;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* Floating effect */
     opacity: 0;
-    animation: fadeIn 1.5s ease forwards; 
-    animation-delay: 0.5s;
+    animation: popIn 1.2s ease forwards; /* Pop-in animation */
+    animation-delay: 0.3s;
 }
 
-
+/* Style for the image */
 img {
-    max-width: 300px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    border-radius: 50%; /* Circle go womp */
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
     opacity: 0;
-    animation: zoomIn 1s ease forwards; 
-    animation-delay: 1s;
+    animation: popIn 1.2s ease forwards;
+    animation-delay: 0.6s;
 }
 
+/* Add green hue highlight on hover for image */
+img:hover {
+    box-shadow: 0 0 15px 10px #90EE90; /* Glowing green border */
+}
+
+/* Footer styling */
 footer {
     background-color: #333;
-    color: white;
+    color: rgb(77, 231, 115);
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative; /* Removed fixed to make it dynamic */
     bottom: 0;
-    width: 100%;
+    width: 100%; /* Ensure it stretches across the full width of the viewport */
     font-size: 0.8em;
     opacity: 0;
-    animation: slideUp 1s ease forwards;
-    animation-delay: 1.5s;
+    animation: popIn 1.5s ease forwards; /* Pop-in animation */
+    animation-delay: 1s;
+    margin-top: auto; /* Push footer to the bottom of the page */
 }
 
-/* Krezy Animations */
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Footer navigation links */
+.footer-nav a {
+    color: rgb(80, 233, 118);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: text-shadow 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Glowing green effect on hover for footer links */
+.footer-nav a:hover {
+    text-shadow: 0 0 10px #90EE90;
 }
 
-@keyframes zoomIn {
+/* Keyframe for pop-in animation */
+@keyframes popIn {
     from {
         transform: scale(0.5);
         opacity: 0;
     }
     to {
         transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
         opacity: 1;
     }
 }
