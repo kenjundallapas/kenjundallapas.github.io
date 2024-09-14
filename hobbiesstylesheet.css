@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #90EE90; 
+    background-color: #e9d4ed; 
     opacity: 0; /* hidden anim */
     animation: popIn 1.5s ease forwards; /*animation*/
     display: flex;
@@ -14,8 +14,8 @@ body {
 header, section, footer {
     position: relative;
     z-index: 1;
-    color: #4af761c7;
-    background-color: #FFFFFF; /* header */
+    color: #ffffff;
+    background-color: #300d2ec9; /* header */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* floating something effect */
@@ -24,9 +24,9 @@ header, section, footer {
 /* Header styling */
 header {
     text-align: center;
-    padding: 50px;
-    font-size: 2.5em;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* same effect */
+    padding: 20px;
+    font-size: 1.8em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* same effect */
 }
 
 /* GIF container */
@@ -68,7 +68,7 @@ section {
 
 /* glow */
 .gif-item img:hover {
-    box-shadow: 0 0 20px 8px #90EE90; 
+    box-shadow: 0 0 20px 8px #6b1b64; 
     transform: scale(1.05); 
 }
 
@@ -76,7 +76,7 @@ section {
 .gif-item .gif-title {
     margin-top: 10px;
     font-size: 1.8em;
-    color: #e5e74e;
+    color: #622097;
 }
 
 
@@ -86,10 +86,16 @@ section {
     margin-top: 5px;
 }
 
+.caption {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #7a4e9e;
+}
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 30px;
     position: relative; 
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 1.2em;
@@ -99,14 +105,14 @@ footer {
 
 
 footer a {
-    color: #90EE90;
+    color: #8c4c99;
     text-decoration: none;
     padding: 5px 15px;
     transition: all 0.3s ease;
 }
 
 footer a:hover {
-    text-shadow: 0 0 8px #90EE90;
+    text-shadow: 0 0 8px #e0cde0;
     color: white;
 }
 

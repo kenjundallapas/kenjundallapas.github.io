@@ -1,35 +1,40 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d4edda; /* Light green background */
+    background-color: #e9d4ed; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
     transition: background-color 0.5s ease;
     display: flex;
-    flex-direction: column; /* Allows the footer to be placed at the bottom */
-    min-height: 100vh; /* Ensure body fills at least the full height of the viewport */
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
-/* Styling for header, section, footer with floating shadow */
+/* Styling for header, section, footer with floating effect*/
 header, section, footer {
     position: relative;
     z-index: 1;
     color: #000000c7;
-    background-color: #FFFFFF; /* White background */
+    background-color: #FFFFFF; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* Darker, wider shadow */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); 
 }
 
 /* Header styling */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #300d2ec9;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2em;
-    animation: popIn 0.8s ease forwards; /* Pop-in animation */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Floating effect */
+    animation: popIn 0.8s ease forwards; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); 
+}
+
+section p {
+    color: #fdfdfd; 
+    font-size: 1.2em; 
+    line-height: 1.6; 
 }
 
 /* Section styling */
@@ -37,11 +42,11 @@ section {
     margin: 20px auto;
     padding: 20px;
     width: 75%;
-    background-color: white;
+    background-color: rgb(90, 65, 87);
     border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7); /* Floating effect */
+    box-shadow: 0 15px 20px rgba(255, 255, 255, 0.959); /* float effect */
     opacity: 0;
-    animation: popIn 1.2s ease forwards; /* Pop-in animation */
+    animation: popIn 1.2s ease forwards; 
     animation-delay: 0.3s;
 }
 
@@ -59,48 +64,43 @@ img {
     animation-delay: 0.6s;
 }
 
-/* Add green hue highlight on hover for image */
+
 img:hover {
-    box-shadow: 0 0 15px 10px #90EE90; /* Glowing green border */
+    box-shadow: 0 0 15px 10px #300d2ec9; 
 }
 
 /* Footer styling */
 footer {
-    background-color: #333;
-    color: rgb(77, 231, 115);
     text-align: center;
     padding: 10px;
-    position: relative; /* Removed fixed to make it dynamic */
-    bottom: 0;
-    width: 100%; /* Ensure it stretches across the full width of the viewport */
-    font-size: 0.8em;
-    opacity: 0;
-    animation: popIn 1.5s ease forwards; /* Pop-in animation */
-    animation-delay: 1s;
-    margin-top: auto; /* Push footer to the bottom of the page */
-}
-
-/* Footer navigation links */
-.footer-nav a {
-    color: rgb(80, 233, 118);
-    text-decoration: none;
-    margin: 0 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); 
     font-size: 1.2em;
-    transition: text-shadow 0.3s ease;
+    z-index: 10;
+    margin-top: auto; 
+    animation: popIn 1s ease forwards; 
 }
 
-/* Glowing green effect on hover for footer links */
-.footer-nav a:hover {
-    text-shadow: 0 0 10px #90EE90;
+
+footer a {
+    color: #8c4c99;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
 }
 
-/* Keyframe for pop-in animation */
+footer a:hover {
+    text-shadow: 0 0 8px #e0cde0;
+    color: white;
+}
+
+
 @keyframes popIn {
-    from {
-        transform: scale(0.5);
+    0% {
+        transform: scale(0.8);
         opacity: 0;
     }
-    to {
+    100% {
         transform: scale(1);
         opacity: 1;
     }
